@@ -1,0 +1,192 @@
+package entity;
+
+public class product {
+
+	public static String[] pstatus = { "有货", "无货" };
+	public static String[] ppriority = { "一级", "二级" };
+
+	int id;
+	String fullname;
+	int type_id;
+	String activity;
+	String tip;
+	String sale;
+	String info;
+	double price;
+	double nowprice;
+	int salecount;
+	int collectcount;
+	int priority;
+	int status;
+	String pics;
+	String comments;
+	String type_name;
+
+	public String getType_name() {
+		return type_name;
+	}
+
+	public void setType_name(String type_name) {
+		this.type_name = type_name;
+	}
+
+	public product() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public static String[] getPstatus() {
+		return pstatus;
+	}
+
+	public static void setPstatus(String[] pstatus) {
+		product.pstatus = pstatus;
+	}
+
+	public static String[] getPpriority() {
+		return ppriority;
+	}
+
+	public static void setPpriority(String[] ppriority) {
+		product.ppriority = ppriority;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getFullname() {
+		return fullname;
+	}
+
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
+	}
+
+	public int getType_id() {
+		return type_id;
+	}
+
+	public void setType_id(int type_id) {
+		this.type_id = type_id;
+	}
+
+	public String getActivity() {
+		return activity;
+	}
+
+	public void setActivity(String activity) {
+		this.activity = activity;
+	}
+
+	public String getTip() {
+		return tip;
+	}
+
+	public void setTip(String tip) {
+		this.tip = tip;
+	}
+
+	public String getSale() {
+		return sale;
+	}
+
+	public void setSale(String sale) {
+		this.sale = sale;
+	}
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public double getNowprice() {
+		return nowprice;
+	}
+
+	public void setNowprice(double nowprice) {
+		this.nowprice = nowprice;
+	}
+
+	public int getSalecount() {
+		return salecount;
+	}
+
+	public void setSalecount(int salecount) {
+		this.salecount = salecount;
+	}
+
+	public int getCollectcount() {
+		return collectcount;
+	}
+
+	public void setCollectcount(int collectcount) {
+		this.collectcount = collectcount;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	public String getPics() {
+		return pics;
+	}
+
+	public void setPics(String pics) {
+		this.pics = pics;
+	}
+
+	public String getComments() {
+		return comments;
+	}
+
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+
+	public String[] getPiclist() {// 图片上传
+		if (pics.length() < 5)
+			return new String[0];
+		return pics.split(",");
+	}
+
+	public String getPic() {
+		if (pics.length() < 5)
+			return null;
+		String[] pic = pics.split(",");
+
+		if (pic.length > 0)
+			return pic[0];
+		else
+			return null;
+	}
+
+}
